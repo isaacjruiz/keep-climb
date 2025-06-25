@@ -12,15 +12,15 @@ export default function RotacionForm() {
   }>(null);
 
   const calcular = async () => {
-    const res = await fetch('http://localhost:8000/api/calcular', {
+    const res = await fetch('https://keep-climb-production.up.railway.app/api/calcular', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        empleados: Number(empleados),
-        rotacion_actual: Number(actual),
-        rotacion_deseada: Number(deseada),
-      }),
-    });
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    empleados: Number(empleados),
+    rotacion_actual: Number(actual),
+    rotacion_deseada: Number(deseada),
+  }),
+});
     const data = await res.json();
     setResultado(data);
   };

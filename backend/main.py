@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -25,3 +26,8 @@ def calcular(data: InputData):
         data.rotacion_actual / 100,
         data.rotacion_deseada / 100
     )
+
+# Solo para ejecución directa (opcional en Railway)
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
