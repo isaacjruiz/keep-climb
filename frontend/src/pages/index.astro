@@ -1,25 +1,13 @@
 ---
-import RotacionForm from '../components/RotacionForm.tsx';
+import RotacionForm from '../components/RotacionForm';
 ---
 
 <html lang="es">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="generator" content={Astro.generator}>
-    <title>KeepCLIMB - Calculadora</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
+    <title>KeeCLIMB - Calculadora</title>
   </head>
-  <body class="bg-black text-white min-h-screen flex flex-col items-center pt-6 sm:pt-10 font-sans">
-    <header class="text-center mb-8 sm:mb-10">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold">KeepCLIMB</h1>
-      <p class="text-lg sm:text-xl mt-2">Calculadora de ahorro por rotación de personal.</p>
-    </header>
-    <main class="w-full max-w-4xl px-4">
-      <p class="text-xl sm:text-2xl md:text-3xl font-light text-center mb-4 sm:mb-6">Menos rotación. <span class="font-semibold">Más crecimiento. Más ahorro</span></p>
-      <p class="text-center text-base sm:text-lg mb-6 sm:mb-8">Identifique el ahorro reduciendo la rotación:</p>
-      <RotacionForm client:load />
-    </main>
+  <body>
+    <h1>Calculadora de Ahorro</h1>
+    <RotacionForm client:load />
   </body>
 </html>
